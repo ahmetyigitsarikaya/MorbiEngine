@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project_name": "MorbiSandbox",
+  "project_version": "1.0.0",
+  "engine_version": "1.0.0",
+  "assets_dir": "Assets",
+  "scripts_dir": "Scripts",
+  "startup_scene": "assets://DefaultScene.mscene.json",
+  "managed_assembly": "Morbi.Engine.dll",
+  "entry_script_class": "Morbi.Engine.PlayerController",
+  "default_rhi": "vulkan",
+  "window": {
+    "title": "MorbiEngine - Sandbox Project",
+    "width": 1280,
+    "height": 720,
+    "vsync": true
+  }
+}

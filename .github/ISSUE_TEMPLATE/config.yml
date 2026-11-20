@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Support & Documentation
+    url: https://github.com
+    about: Check docs/development/BUILDING.md and docs/architecture/OVERVIEW.md before opening an issue.

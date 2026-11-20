@@ -1,0 +1,193 @@
+{
+  "entities": [
+    {
+      "generation": 1,
+      "index": 0,
+      "light": {
+        "color": [
+          1.0,
+          0.95,
+          0.85
+        ],
+        "intensity": 12.0,
+        "range": 100.0,
+        "type": 0
+      },
+      "name": "DirectionalLight",
+      "transform": {
+        "position": [
+          0.0,
+          10.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "generation": 1,
+      "index": 1,
+      "name": "StaticGroundFloor",
+      "transform": {
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "generation": 1,
+      "index": 2,
+      "mesh_renderer": {
+        "flags": 1,
+        "material_asset_id": 3412853065894470299,
+        "mesh_asset_id": 459202948264581002,
+        "submesh_index": 4294967295
+      },
+      "name": "Player",
+      "script": {
+        "angular_speed": 0.0,
+        "class_id": 6148890725930974000,
+        "enabled": 0
+      },
+      "transform": {
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "scale": [
+          0.005,
+          0.005,
+          0.005
+        ]
+      }
+    },
+    {
+      "generation": 1,
+      "index": 3,
+      "mesh_renderer": {
+        "flags": 1,
+        "material_asset_id": 0,
+        "mesh_asset_id": 68732108289,
+        "submesh_index": 4294967295
+      },
+      "name": "GroundCube",
+      "transform": {
+        "position": [
+          0.0,
+          -0.1,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "scale": [
+          60.0,
+          0.2,
+          60.0
+        ]
+      }
+    },
+    {
+      "generation": 1,
+      "index": 4,
+      "light": {
+        "color": [
+          1.0,
+          0.95,
+          0.85
+        ],
+        "intensity": 50.0,
+        "range": 25.0,
+        "type": 1
+      },
+      "name": "PointLight",
+      "transform": {
+        "position": [
+          0.0,
+          5.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "camera": {
+        "aspect": 1.7777778,
+        "far": 1000.0,
+        "fov": 60.0,
+        "is_active": 1,
+        "near": 0.1
+      },
+      "generation": 1,
+      "index": 5,
+      "mesh_renderer": {
+        "flags": 1,
+        "material_asset_id": 0,
+        "mesh_asset_id": 68732112897,
+        "submesh_index": 4294967295
+      },
+      "name": "MainCamera",
+      "transform": {
+        "position": [
+          0.0,
+          2.0,
+          -3.5
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  ],
+  "scene_name": "ThirdPersonSandbox"
+}

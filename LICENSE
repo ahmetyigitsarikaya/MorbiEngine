@@ -1,0 +1,232 @@
+================================================================================
+              MORBI ENGINE SOURCE-AVAILABLE LICENSE (MESAL) v1.0
+================================================================================
+
+Copyright (c) 2026 Morbi Engine Contributors / Project Owner.
+All rights reserved.
+
+IMPORTANT NOTICES:
+1. SOURCE-AVAILABLE — NOT OSI OPEN SOURCE: This License is a custom
+   source-available license. It is NOT an Open Source Initiative (OSI)-approved
+   open-source license and must not be represented or described as one.
+2. LEGAL REVIEW NOTICE: This document is a custom license draft prepared for
+   Morbi Engine. Qualified legal counsel should review and finalize this
+   License before public publication or commercial enforcement.
+
+--------------------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------------------
+
+1.1 "Licensor" means the copyright owner(s) of Morbi Engine who distribute the
+    Engine under this License.
+
+1.2 "You" (or "Your") means the individual or legal entity exercising
+    permissions granted by this License.
+
+1.3 "Engine" means the original Morbi Engine software, including its C++ source
+    code, headers, shaders, C# managed bridge source code, editor source code,
+    build scripts, project templates, documentation, and original assets made
+    available by Licensor under this License, expressly excluding Third-Party
+    Components.
+
+1.4 "Modifications" means any additions, deletions, patches, forks, or
+    derivative works You make to the Engine.
+
+1.5 "Engine Development Tools" means MorbiEditor, the Editor Frontend, CMake
+    build scripts, SDK headers, static import libraries used for engine
+    development, LauncherTemplate source, ProjectBuilder, shader compilation
+    toolchains, and any development-only dependencies or utilities packaged
+    with or used to build the Engine.
+
+1.6 "Engine Runtime Components" means solely the compiled binary files of the
+    Engine (such as compiled dynamic/shared libraries, static libraries linked
+    into a game executable, compiled managed runtime assemblies, dedicated
+    server binaries, and the compiled game launcher executable) that are
+    strictly necessary at runtime to execute a Game Build.
+
+1.7 "Game" means an interactive video game, simulation, or 3D end-user
+    application developed by You using the Engine, whose primary purpose is
+    end-user entertainment, visualization, or simulation, and NOT to function as
+    a game engine, rendering engine, authoring tool, editor, SDK, middleware,
+    or software development framework.
+
+1.8 "Game Build" means a compiled, packaged end-user distribution of Your Game
+    (including an associated dedicated game server build for Your Game)
+    intended solely for end users to play or run Your Game.
+
+1.9 "Third-Party Components" means any third-party libraries, runtimes,
+    toolchains, packages, or assets referenced, vendored, fetched, or linked by
+    the Engine, as documented in docs/THIRD_PARTY_NOTICES.md.
+
+--------------------------------------------------------------------------------
+2. GRANT OF RIGHTS
+--------------------------------------------------------------------------------
+
+Subject to Your strict compliance with all terms and restrictions of this
+License, Licensor hereby grants You a non-exclusive, worldwide, revocable,
+non-transferable, non-sublicensable license to:
+
+2.1 Source Code Inspection
+    Download, clone, read, inspect, and audit the source code of the Engine.
+
+2.2 Local Modification
+    Modify the Engine source code and create Modifications solely for Your own
+    local, private, or internal development use.
+
+2.3 Game Development
+    Use the unmodified Engine or Your Modifications to design, develop,
+    compile, and build Games, whether intended for free or commercial release.
+
+2.4 Distribution of Free or Commercial Games and Required Runtime Components
+    Distribute Your finished Game Build (free of charge or commercially), and
+    include within that Game Build the compiled Engine Runtime Components
+    (compiled from either the unmodified Engine or Your Modifications) SOLELY
+    as an integral part of Your Game Build and strictly to the extent necessary
+    to enable end users to execute Your Game.
+
+--------------------------------------------------------------------------------
+3. RESTRICTIONS
+--------------------------------------------------------------------------------
+
+Except as expressly permitted in Section 2, You SHALL NOT, directly or
+indirectly:
+
+3.1 No Source Code Redistribution
+    Redistribute, publish, host publicly, mirror, share, sell, lease, or
+    sublicense the Engine source code or Your Modifications (in source or
+    intermediate form) to any third party.
+    (Note: Submitting pull requests or patches directly to Licensor's official
+    repository does not violate this section, subject to Licensor's
+    contribution terms.)
+
+3.2 No Editor, SDK, or Standalone Engine Redistribution
+    Redistribute, publish, sell, or bundle MorbiEditor, the Editor Frontend,
+    SDK headers, source templates, or any standalone Engine package, whether
+    modified or unmodified.
+
+3.3 No Unrelated Development Tool or Dependency Redistribution
+    Redistribute Engine Development Tools or development-time dependencies
+    separately from, or in any manner unrelated to, executing a legitimate
+    Game Build.
+
+3.4 No Standalone Runtime or Competing Engine Products
+    Use the runtime distribution permission in Section 2.4 to:
+    (a) distribute Engine Runtime Components on a standalone basis or as a
+        reusable library, SDK, plugin, or runtime package for third-party
+        developers;
+    (b) create, market, or distribute a competing or derivative game engine,
+        graphics engine, game editor, authoring suite, middleware, or
+        application framework; or
+    (c) expose the Engine or Engine Development Tools as a hosted cloud
+        development service or engine-as-a-service to third parties.
+
+3.5 No OSI Open-Source Misrepresentation
+    Describe, represent, or market this License or the Engine as "OSI-approved
+    open source" or under any license other than MESAL v1.0.
+
+3.6 No Removal of Notices
+    Remove, obscure, or alter any copyright, license, or third-party
+    attribution notices included in the Engine or docs/THIRD_PARTY_NOTICES.md.
+
+--------------------------------------------------------------------------------
+4. LEGAL DISTINCTION BETWEEN GAME BUILD DISTRIBUTION AND ENGINE DISTRIBUTION
+--------------------------------------------------------------------------------
+
+For the avoidance of doubt, this License establishes a strict legal separation
+between:
+
+  (A) GAME BUILD DISTRIBUTION (PERMITTED): Shipping a compiled, end-user Game
+      Build (free or commercial) that bundles only the compiled Engine Runtime
+      Components required to run that specific Game.
+
+  (B) ENGINE DISTRIBUTION (PROHIBITED): Distributing the Engine itself, its
+      source code, Modifications, MorbiEditor, Engine Development Tools, SDKs,
+      headers, or standalone Engine Runtime Components outside of an end-user
+      Game Build.
+
+Permission to perform (A) never implies, expands into, or grants permission to
+perform (B).
+
+--------------------------------------------------------------------------------
+5. THIRD-PARTY COMPONENTS
+--------------------------------------------------------------------------------
+
+5.1 This License governs ONLY original Morbi Engine code and assets authored by
+    Licensor. It does NOT apply to, modify, restrict, or supersede the license
+    of any Third-Party Component.
+
+5.2 Each Third-Party Component (including, without limitation, Jolt Physics,
+    Khronos SPIRV-Reflect, ENet, libsodium, nlohmann/json, SDL3, Khronos Vulkan
+    Headers, DXC, SPIRV-Tools, SoLoud, Assimp, zlib, WebView2Loader, .NET
+    Runtime / Roslyn, React, and optional portable toolchains) remains governed
+    exclusively by its own license terms, as documented in
+    docs/THIRD_PARTY_NOTICES.md.
+
+5.3 When You build or distribute a Game Build, You are solely responsible for
+    complying with all license terms, copyright notices, and binary
+    redistribution requirements of any Third-Party Components included in Your
+    Game Build.
+
+--------------------------------------------------------------------------------
+6. TRADEMARKS AND BRANDING
+--------------------------------------------------------------------------------
+
+This License does not grant or transfer any rights, title, or interest in or to
+the trademarks, service marks, trade names, logos, banners, or brand assets of
+"Morbi Engine", "Morbi", or Licensor. You may make truthful, factual statements
+that Your Game was built with Morbi Engine, provided You do not imply
+sponsorship, endorsement, or official affiliation by Licensor without prior
+written permission.
+
+--------------------------------------------------------------------------------
+7. RESERVATION OF RIGHTS AND TERMINATION
+--------------------------------------------------------------------------------
+
+7.1 All rights not expressly granted to You under this License are strictly
+    reserved by Licensor.
+
+7.2 Your rights under this License terminate automatically and immediately
+    without notice if You fail to comply with any term or restriction herein.
+    Upon termination, You must cease all use and distribution of the Engine and
+    destroy all copies of Engine source code and Modifications in Your
+    possession. Legitimate Game Builds already lawfully distributed to end
+    users prior to termination may continue to be used by those end users.
+
+--------------------------------------------------------------------------------
+8. DISCLAIMER OF WARRANTY
+--------------------------------------------------------------------------------
+
+THE ENGINE, INCLUDING ALL SOURCE CODE, ENGINE RUNTIME COMPONENTS, ENGINE
+DEVELOPMENT TOOLS, AND DOCUMENTATION, IS PROVIDED "AS IS" AND "AS AVAILABLE",
+WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT
+LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, TITLE, ACCURACY, AND NON-INFRINGEMENT. MORBI ENGINE IS IN EARLY
+DEVELOPMENT; LICENSOR DOES NOT WARRANT THAT THE ENGINE WILL BE UNINTERRUPTED,
+ERROR-FREE, SECURE, OR COMPATIBLE WITH ANY HARDWARE OR SOFTWARE. YOU ASSUME ALL
+RISK ARISING FROM YOUR USE, MODIFICATION, OR DISTRIBUTION OF GAME BUILDS.
+
+--------------------------------------------------------------------------------
+9. LIMITATION OF LIABILITY
+--------------------------------------------------------------------------------
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL LICENSOR
+OR ANY CONTRIBUTOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION,
+LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF DATA, BUSINESS INTERRUPTION, HARDWARE
+FAILURE, OR COST OF SUBSTITUTE GOODS OR SERVICES), HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE), ARISING IN ANY WAY OUT OF OR IN CONNECTION WITH THE
+ENGINE OR THIS LICENSE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+--------------------------------------------------------------------------------
+10. GENERAL PROVISIONS
+--------------------------------------------------------------------------------
+
+10.1 Severability: If any provision of this License is held invalid or
+     unenforceable, the remaining provisions shall remain in full force and
+     effect.
+
+10.2 Entire Agreement: This License (together with docs/THIRD_PARTY_NOTICES.md
+     for Third-Party Components) constitutes the entire agreement between You
+     and Licensor regarding the Engine, unless superseded by a separate written
+     commercial agreement executed by Licensor.

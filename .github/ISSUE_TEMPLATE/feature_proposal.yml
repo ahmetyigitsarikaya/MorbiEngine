@@ -1,0 +1,30 @@
+name: Feature Proposal
+description: Propose a new engine capability, architecture improvement, or workflow enhancement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > Morbi Engine is in early development. Please check `docs/road/MORBI_ENGINE_ROADMAP.md` before proposing a new feature.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Motivation / Problem Statement
+      description: What limitation or use case does this proposal address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Design
+      description: Outline the proposed architecture, affected modules (`Morbi.*`), and API impact.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives & Tradeoffs
+      description: What alternative approaches were considered and what are the tradeoffs?

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340" role="img" aria-label="Morbi Engine — Modular C++20 Game Engine Banner">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="55%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+    <linearGradient id="meshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.06" />
+    </linearGradient>
+    <pattern id="techGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1E293B" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="1280" height="340" rx="14" fill="url(#bgGrad)" />
+  <rect width="1280" height="340" rx="14" fill="url(#techGrid)" opacity="0.55" />
+  <rect x="1" y="1" width="1278" height="338" rx="13" fill="none" stroke="#1E293B" stroke-width="2" />
+
+  <!-- Top technical accent bar -->
+  <rect x="0" y="0" width="1280" height="4" rx="2" fill="url(#accentCyan)" />
+
+  <!-- Right-side abstract GPU / Render Graph geometric wireframe -->
+  <g transform="translate(860, 42)" opacity="0.95">
+    <!-- Isometric prism layers representing RHI -> RenderGraph -> Frame -->
+    <polygon points="180,20 330,95 180,170 30,95" fill="url(#meshGrad)" stroke="#38BDF8" stroke-width="1.5" />
+    <polygon points="180,72 330,147 180,222 30,147" fill="#0F172A" fill-opacity="0.65" stroke="#6366F1" stroke-width="1.4" />
+    <polygon points="180,124 330,199 180,274 30,199" fill="#0B1120" fill-opacity="0.7" stroke="#334155" stroke-width="1.2" />
+
+    <!-- Vertical dependency edges -->
+    <line x1="180" y1="20" x2="180" y2="124" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" opacity="0.7" />
+    <line x1="30" y1="95" x2="30" y2="199" stroke="#64748B" stroke-width="1" stroke-dasharray="3 4" opacity="0.6" />
+    <line x1="330" y1="95" x2="330" y2="199" stroke="#64748B" stroke-width="1" stroke-dasharray="3 4" opacity="0.6" />
+
+    <!-- Render graph nodes -->
+    <circle cx="180" cy="20" r="4.5" fill="#38BDF8" />
+    <circle cx="330" cy="95" r="4" fill="#818CF8" />
+    <circle cx="30" cy="95" r="4" fill="#38BDF8" />
+    <circle cx="180" cy="170" r="4.5" fill="#38BDF8" />
+    <circle cx="180" cy="222" r="4" fill="#818CF8" />
+
+    <!-- Subtle technical labels -->
+    <text x="180" y="100" text-anchor="middle" fill="#E2E8F0" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="2">RENDER GRAPH</text>
+    <text x="180" y="152" text-anchor="middle" fill="#94A3B8" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2">RHI · VULKAN 1.3 · DX12</text>
+    <text x="180" y="204" text-anchor="middle" fill="#64748B" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="2">DXC · DXIL · SPIR-V</text>
+  </g>
+
+  <!-- Left-side brand & metadata -->
+  <g transform="translate(68, 66)">
+    <!-- Status pill -->
+    <rect x="0" y="0" width="218" height="26" rx="13" fill="#451A03" stroke="#F59E0B" stroke-width="1" />
+    <circle cx="16" cy="13" r="4" fill="#F59E0B" />
+    <text x="29" y="17" fill="#FCD34D" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">EARLY DEVELOPMENT · WIP</text>
+
+    <!-- Main title -->
+    <text x="0" y="96" fill="#F8FAFC" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="5">MORBI ENGINE</text>
+
+    <!-- Accent rule -->
+    <rect x="0" y="114" width="140" height="3" rx="1.5" fill="url(#accentCyan)" />
+
+    <!-- Technical tagline -->
+    <text x="0" y="150" fill="#CBD5E1" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="20" font-weight="400">Modular C++20 General-Purpose 3D Game Engine</text>
+
+    <!-- Capability pills -->
+    <g transform="translate(0, 178)" font-family="Consolas, Menlo, monospace" font-size="12" font-weight="600">
+      <rect x="0" y="0" width="84" height="28" rx="6" fill="#1E293B" stroke="#334155" />
+      <text x="42" y="18" text-anchor="middle" fill="#38BDF8">C++20</text>
+
+      <rect x="94" y="0" width="108" height="28" rx="6" fill="#1E293B" stroke="#334155" />
+      <text x="148" y="18" text-anchor="middle" fill="#E2E8F0">Vulkan 1.3</text>
+
+      <rect x="212" y="0" width="104" height="28" rx="6" fill="#1E293B" stroke="#334155" />
+      <text x="264" y="18" text-anchor="middle" fill="#E2E8F0">DirectX 12</text>
+
+      <rect x="326" y="0" width="96" height="28" rx="6" fill="#1E293B" stroke="#334155" />
+      <text x="374" y="18" text-anchor="middle" fill="#A5B4FC">.NET 10</text>
+
+      <rect x="432" y="0" width="112" height="28" rx="6" fill="#1E293B" stroke="#334155" />
+      <text x="488" y="18" text-anchor="middle" fill="#E2E8F0">Jolt Physics</text>
+
+      <rect x="554" y="0" width="118" height="28" rx="6" fill="#1E293B" stroke="#334155" />
+      <text x="613" y="18" text-anchor="middle" fill="#E2E8F0">React Editor</text>
+    </g>
+  </g>
+</svg>

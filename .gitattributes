@@ -1,0 +1,50 @@
+# Auto detect text files and normalize line endings to LF in the repository
+* text=auto eol=lf
+
+# Windows batch & PowerShell scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.rc  text eol=crlf
+
+# Source code & documentation
+*.c    text
+*.cc   text
+*.cpp  text
+*.cxx  text
+*.h    text
+*.hh   text
+*.hpp  text
+*.hlsl text
+*.hlsli text
+*.cs   text
+*.csproj text
+*.ts   text
+*.tsx  text
+*.js   text
+*.jsx  text
+*.json text
+*.cmake text
+CMakeLists.txt text
+*.md   text
+*.yml  text
+*.yaml text
+*.svg  text
+
+# Binary assets
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.tga  binary
+*.bmp  binary
+*.ico  binary
+*.fbx  binary
+*.glb  binary
+*.wav  binary
+*.ogg  binary
+*.mp3  binary
+*.mpak binary
+*.mAsset binary
+*.zip  binary
+*.7z   binary
+*.rar  binary

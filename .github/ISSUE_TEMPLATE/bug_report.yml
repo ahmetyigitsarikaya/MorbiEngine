@@ -1,0 +1,65 @@
+name: Bug Report
+description: Report a crash, build failure, or unexpected engine/editor behavior
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Early Development Notice:** Morbi Engine is actively evolving. Please provide exact build and system details so maintainers can reproduce the issue.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Description
+      description: Clearly describe what happened and what you expected to happen.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Affected Subsystem
+      options:
+        - Core / IO / Platform
+        - Scene / ECS
+        - Physics (Jolt)
+        - Audio (SoLoud)
+        - Asset Pipeline / Animation
+        - Networking / Dedicated Server
+        - Scripting (.NET / C#)
+        - Editor / WebView2 Frontend
+        - Build System / CMake
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: System & Build Configuration
+      description: OS, compiler, CMake preset, .NET SDK version, and graphics backend.
+      placeholder: |
+        - OS: Windows 11 x64
+        - Compiler: MSVC (Visual Studio 2022)
+        - Preset: windows-release / windows-debug
+        - Graphics Backend: Vulkan / DirectX 12
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Configure with ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Error Output
+      description: Paste relevant compiler errors or engine log lines (redact any local credentials or sensitive paths).
+      render: text

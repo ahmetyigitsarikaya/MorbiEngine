@@ -1,0 +1,3 @@
+MORBI_FRONTEND_HTML        RCDATA "../Frontend/dist/index.html"
+MORBI_FRONTEND_MINIMAP     RCDATA "../Frontend/dist/minimap.jpg"
+MORBI_FRONTEND_VIEWPORT_BG RCDATA "../Frontend/dist/viewport_bg.jpg"

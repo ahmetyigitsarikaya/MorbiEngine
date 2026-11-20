@@ -1,0 +1,194 @@
+{
+  "scene_name": "PhysicsGameplayValidation",
+  "entities": [
+    {
+      "name": "DirectionalLight",
+      "transform": { "position": [0.0, 18.0, 0.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "light": { "color": [1.0, 0.96, 0.88], "intensity": 12.0, "range": 120.0, "type": 0 }
+    },
+    {
+      "name": "MainCamera",
+      "transform": { "position": [0.0, 14.0, -24.0], "rotation_euler": [25.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "camera": { "fov": 60.0, "near": 0.1, "far": 1000.0, "aspect": 1.777778, "is_active": 1 }
+    },
+    {
+      "name": "ValidationCoordinator",
+      "transform": { "position": [0.0, 0.0, 0.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "script": "GameplayValidation.ValidationCoordinator"
+    },
+    {
+      "name": "GroundFloor",
+      "transform": { "position": [0.0, -0.5, 0.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [50.0, 0.5, 50.0], "friction": 0.7, "restitution": 0.0 }
+    },
+    {
+      "name": "StairStep1",
+      "transform": { "position": [0.0, 0.125, -4.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [2.0, 0.125, 0.6], "friction": 0.8, "restitution": 0.0 }
+    },
+    {
+      "name": "StairStep2",
+      "transform": { "position": [0.0, 0.25, -2.8], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [2.0, 0.25, 0.6], "friction": 0.8, "restitution": 0.0 }
+    },
+    {
+      "name": "StairStep3",
+      "transform": { "position": [0.0, 0.375, -1.6], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [2.0, 0.375, 0.6], "friction": 0.8, "restitution": 0.0 }
+    },
+    {
+      "name": "WalkwayLanding",
+      "transform": { "position": [0.0, 0.375, 0.2], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [2.0, 0.375, 1.2], "friction": 0.8, "restitution": 0.0 }
+    },
+    {
+      "name": "GentleRamp",
+      "transform": { "position": [4.5, 0.65, 2.0], "rotation_euler": [-20.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [2.0, 0.2, 2.5], "friction": 0.8, "restitution": 0.0 }
+    },
+    {
+      "name": "MovingPlatform",
+      "transform": { "position": [0.0, 0.7, 3.2], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Kinematic", "shape": "Box", "half_extents": [1.8, 0.15, 1.8], "friction": 0.9, "restitution": 0.0 },
+      "script": "GameplayValidation.MovingPlatformDriver"
+    },
+    {
+      "name": "GoalTrigger",
+      "transform": { "position": [0.0, 1.5, 9.5], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [3.0, 1.5, 1.5], "is_trigger": 1 },
+      "script": "GameplayValidation.GoalTriggerMonitor"
+    },
+    {
+      "name": "CharPlayer",
+      "transform": { "position": [0.0, 1.2, -7.5], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "character_controller": { "radius": 0.35, "height": 1.8, "mass": 70.0, "max_push_strength": 350.0, "step_height": 0.35, "max_slope_angle_degrees": 45.0 },
+      "script": "GameplayValidation.CharCourseController"
+    },
+    {
+      "name": "RampClimberChar",
+      "transform": { "position": [4.5, 1.0, -1.5], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "character_controller": { "radius": 0.35, "height": 1.8, "mass": 70.0, "max_push_strength": 300.0, "step_height": 0.35, "max_slope_angle_degrees": 45.0 },
+      "script": "GameplayValidation.RampClimberController"
+    },
+    {
+      "name": "RbPlayer",
+      "transform": { "position": [-10.0, 0.6, -6.5], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Dynamic", "shape": "Sphere", "mass": 18.0, "half_extents": [0.5, 0.5, 0.5], "friction": 0.25, "restitution": 0.15, "linear_damping": 0.05 },
+      "script": "GameplayValidation.RbPlayerController"
+    },
+    {
+      "name": "DynamicCrate",
+      "transform": { "position": [-10.0, 0.5, -2.5], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Dynamic", "shape": "Box", "mass": 2.0, "half_extents": [0.5, 0.5, 0.5], "friction": 0.4, "restitution": 0.1 }
+    },
+    {
+      "name": "DynamicBarrel",
+      "transform": { "position": [-10.3, 0.65, -0.5], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Dynamic", "shape": "Capsule", "mass": 2.5, "half_extents": [0.35, 0.35, 0.35], "friction": 0.35, "restitution": 0.2 },
+      "script": "GameplayValidation.DynamicBarrelMonitor"
+    },
+    {
+      "name": "CompoundTotem",
+      "transform": { "position": [-14.0, 1.5, 0.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Dynamic", "shape": "Box", "mass": 4.0, "half_extents": [0.3, 0.7, 0.3], "friction": 0.5, "restitution": 0.1 },
+      "compound_colliders": [
+        { "shape": "Box", "half_extents": [0.9, 0.15, 0.3], "local_offset": [0.0, 0.55, 0.0], "local_rotation": [0.0, 0.0, 0.0, 1.0], "collision_layer": 1, "collision_mask": 4294967295, "is_trigger": 0 },
+        { "shape": "Sphere", "half_extents": [0.4, 0.4, 0.4], "local_offset": [0.0, -0.8, 0.0], "local_rotation": [0.0, 0.0, 0.0, 1.0], "collision_layer": 1, "collision_mask": 4294967295, "is_trigger": 0 }
+      ]
+    },
+    {
+      "name": "DoorFrame",
+      "transform": { "position": [-11.3, 1.25, 3.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [0.2, 1.25, 0.2] }
+    },
+    {
+      "name": "HingeDoor",
+      "transform": { "position": [-10.0, 1.25, 3.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Dynamic", "shape": "Box", "mass": 3.0, "half_extents": [0.9, 1.2, 0.1], "use_gravity": 0, "linear_damping": 0.1, "angular_damping": 0.2 },
+      "physics_joints": [
+        {
+          "type": "Hinge",
+          "connected_entity": "DoorFrame",
+          "anchor_a": [-11.0, 1.25, 3.0],
+          "anchor_b": [-11.0, 1.25, 3.0],
+          "axis": [0.0, 1.0, 0.0],
+          "auto_detect_anchors": true,
+          "min_limit": -2.2,
+          "max_limit": 2.2,
+          "max_friction": 0.15,
+          "enabled": true
+        }
+      ],
+      "script": "GameplayValidation.HingeDoorMonitor"
+    },
+    {
+      "name": "SliderBase",
+      "transform": { "position": [10.0, 1.0, -4.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [0.3, 0.5, 0.3] }
+    },
+    {
+      "name": "SliderCarriage",
+      "transform": { "position": [11.0, 1.0, -4.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Dynamic", "shape": "Box", "mass": 2.0, "half_extents": [0.45, 0.45, 0.45], "use_gravity": 0, "linear_damping": 0.2 },
+      "physics_joints": [
+        {
+          "type": "Slider",
+          "connected_entity": "SliderBase",
+          "anchor_a": [10.5, 1.0, -4.0],
+          "anchor_b": [10.5, 1.0, -4.0],
+          "axis": [1.0, 0.0, 0.0],
+          "auto_detect_anchors": true,
+          "min_limit": -0.2,
+          "max_limit": 3.5,
+          "max_friction": 0.2,
+          "enabled": true
+        }
+      ],
+      "script": "GameplayValidation.SliderDriver"
+    },
+    {
+      "name": "FixedCarrier",
+      "transform": { "position": [10.0, 1.0, 3.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Dynamic", "shape": "Box", "mass": 2.0, "half_extents": [0.45, 0.45, 0.45] }
+    },
+    {
+      "name": "FixedPayload",
+      "transform": { "position": [11.0, 1.0, 3.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Dynamic", "shape": "Box", "mass": 2.0, "half_extents": [0.45, 0.45, 0.45] },
+      "physics_joints": [
+        {
+          "type": "Fixed",
+          "connected_entity": "FixedCarrier",
+          "anchor_a": [10.5, 1.0, 3.0],
+          "anchor_b": [10.5, 1.0, 3.0],
+          "auto_detect_anchors": true,
+          "break_force": 8000.0,
+          "enabled": true
+        }
+      ],
+      "script": "GameplayValidation.FixedCouplerMonitor"
+    },
+    {
+      "name": "PendulumPivot",
+      "transform": { "position": [10.0, 5.0, 9.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Static", "shape": "Box", "half_extents": [0.2, 0.2, 0.2] }
+    },
+    {
+      "name": "PendulumBob",
+      "transform": { "position": [12.5, 5.0, 9.0], "rotation": [0.0, 0.0, 0.0, 1.0], "scale": [1.0, 1.0, 1.0] },
+      "rigid_body": { "motion_type": "Dynamic", "shape": "Sphere", "mass": 2.0, "half_extents": [0.4, 0.4, 0.4] },
+      "physics_joints": [
+        {
+          "type": "Distance",
+          "connected_entity": "PendulumPivot",
+          "auto_detect_anchors": true,
+          "min_distance": 0.5,
+          "max_distance": 2.6,
+          "spring_frequency_hz": 4.0,
+          "spring_damping_ratio": 0.5,
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

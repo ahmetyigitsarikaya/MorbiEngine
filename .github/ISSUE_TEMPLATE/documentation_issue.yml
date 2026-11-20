@@ -1,0 +1,19 @@
+name: Documentation Issue
+description: Report inaccurate, outdated, or missing documentation or broken diagrams/links
+labels: ["documentation"]
+body:
+  - type: input
+    id: document
+    attributes:
+      label: Document Path
+      placeholder: e.g., README.md or docs/architecture/GRAPHICS_ARCHITECTURE.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Issue Details
+      description: Explain what is inaccurate, unclear, outdated, or broken compared to the actual codebase.
+    validations:
+      required: true

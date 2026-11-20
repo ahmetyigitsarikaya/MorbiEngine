@@ -1,0 +1,87 @@
+# ============================================================================
+# Morbi Engine — .gitignore
+# ============================================================================
+
+# Build outputs
+/build/
+/build-*/
+/out/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Compiled binaries & debug symbols in source tree
+/MorbiEditor.exe
+/MorbiEditor.pdb
+/Editor/MorbiEditor.exe
+/Editor/MorbiEditor.pdb
+/Samples/Sandbox/MorbiSandbox.exe
+/Samples/Sandbox/MorbiSandbox.pdb
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.obj
+*.o
+*.a
+*.so
+*.dylib
+*.dmp
+
+# Runtime caches, logs & scratch files
+/Logs/
+/cache/
+/scratch/
+*.log
+*.mshc
+
+# Editor Frontend (Node / Vite)
+Editor/Frontend/node_modules/
+Editor/Frontend/dist/
+Editor/Frontend/.vite/
+npm-debug.log*
+
+# Managed C# (.NET)
+Managed/**/bin/
+Managed/**/obj/
+*.user
+*.suo
+.vs/
+
+# Large binary portable toolchains (provide via setup/release archive)
+/ThirdParty/Tools/
+
+# Local-only / external workspaces & staging directories (not part of public engine repo)
+/legacy/
+/hub_and_web_syss/
+/testgameassets/
+/NYCMultiplayerTest/
+/ECC/
+
+# Agent local install metadata containing machine-specific paths
+.agents/ecc-install-state.json
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
